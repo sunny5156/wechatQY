@@ -43,6 +43,32 @@ class MediaAPI{
     public function uploadTempMedia(){
         
     }
+    /**
+     * 获取素材文件
+     * @param string $mediaId
+     * @param string $accessToken
+     * @author sunny5156<137898350@qq.com>
+     * @version 
+     * @todo  2016年8月12日 下午6:34:53
+     */
+    public function getTempMediaDetail($mediaId , $accessToken){
+        $res = '';
+        
+        try{
+        
+            $this->mediaTempDetialURL = str_replace('ACCESS_TOKEN', $accessToken, $this->mediaTempDetialURL);
+            $this->mediaTempDetialURL = str_replace('MEDIA_ID', $mediaId, $this->mediaTempDetialURL);
+        
+            $res = $this->_curl->get($this->mediaTempDetialURL);
+        
+            //$res = json_decode($res,true);
+        
+        }catch (\Exception $e){
+            //
+        }
+        
+        return $res;
+    }
     
     
    
