@@ -4,7 +4,7 @@ namespace Department;
 
 use Core\Net\Curl;
 
-class Department {
+class DepartmentAPI {
     
     //创建部门（POST）   
 	private  $departmentCreateURL = "https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=ACCESS_TOKEN";  

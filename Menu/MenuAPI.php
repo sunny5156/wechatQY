@@ -8,7 +8,7 @@ use Core\Net\Curl;
  * @author sunny5156 <137898350@qq.com>
  * @version
  */
-class Menu{
+class MenuAPI{
     
     
     //创建应用菜单（POST）

@@ -3,7 +3,7 @@ namespace User;
 
 use Core\Net\Curl;
 
-class User{
+class UserAPI{
     
     
     //1 创建成员

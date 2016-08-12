@@ -8,7 +8,7 @@ namespace Base;
 
 use Core\Net\Curl;
 
-class AccessToken {
+class AccessTokenAPI {
     
     //请求地址
     public $accessTokenURL = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=CorpID&corpsecret=SECRET";
