@@ -52,6 +52,7 @@ class MediaAPI{
      * @todo  2016年8月12日 下午6:34:53
      */
     public function getTempMediaDetail($mediaId , $accessToken){
+        
         $res = '';
         
         try{
