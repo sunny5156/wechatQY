@@ -33,7 +33,7 @@ $token = $AccessToken->getAccessToken($corpID, $secret);
 
 //debug($token,0);
 
- $Department = new DepartmentAPI();
+/*  $Department = new DepartmentAPI();
 
 $res = $Department->createDepartment(array("name"=>"设计部","parentid"=>5,"order"=>1),$token);
 
@@ -45,7 +45,7 @@ debug($res,0);
 
 $res = $Department->getDepartmentListById(5,$token);
 
-debug($res,0);
+debug($res,0); */
 
 $menu = new MenuAPI();
 
@@ -54,15 +54,15 @@ $data = [
        [	
            "type"=>"view",
            "name"=>"请假",
-           "url"=>"http://www.xalesoft.com"
+           "url"=>"http://ws.bytesclub.com/index.php?m=Survey&c=Survey&a=upToDateSurvey&department_id=1"
        ],
        [
            "name"=>"菜单",
            "sub_button"=>[
                [
                    "type"=>"view",
-                   "name"=>"搜索",
-                   "url"=>"http://www.baidu.com/"
+                   "name"=>"问卷调查",
+                   "url"=>"http://ws.bytesclub.com/index.php?m=Survey&c=Survey&a=upToDateSurvey&department_id=1"
                ],
                [
                    "type"=>"pic_photo_or_album",
@@ -74,8 +74,13 @@ $data = [
    ]
 ];
 
-//$res = $menu->createMenu($data ,7, $token);
+debug($data,0);
 
+//$res = $menu->deleteMenu(7, $token);
+//$res = $menu->createMenu($data ,7, $token);
+$res = $menu->getMenuList(10, $token);
+//$res = $menu->deleteMenu(7, $token);
+debug($res);
 //获取菜单
 //$res = $menu->getMenuList( 7, $token);
 
@@ -120,10 +125,9 @@ $mediaAPI = new MediaAPI();
 
 
 ?>
-
-<!-- <form method="post" action="https://qyapi.weixin.qq.com/cgi-bin/media/upload?access_token=<?php echo $token?>&type=image" enctype="multipart/form-data"> 
+<form method="post" action="https://qyapi.weixin.qq.com/cgi-bin/media/upload?access_token=<?php echo $token?>&type=image" enctype="multipart/form-data"> 
 <input type="file" name="media">
 <button type="submit">上传</button>
-</form> -->
+</form>
 
 
