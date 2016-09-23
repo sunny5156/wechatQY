@@ -76,8 +76,10 @@ $data = [
 
 debug($data,0);
 
-//$res = $menu->deleteMenu(7, $token);
-//$res = $menu->createMenu($data ,7, $token);
+$res = $menu->deleteMenu(7, $token);
+debug($res,0);
+$res = $menu->createMenu($data ,7, $token);
+debug($res,0);
 $res = $menu->getMenuList(10, $token);
 //$res = $menu->deleteMenu(7, $token);
 debug($res);
